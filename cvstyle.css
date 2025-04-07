@@ -1,0 +1,52 @@
+*{
+    margin: 20;
+    padding: 30;
+}
+
+.cv-container{
+   Position: relative;
+   padding: 20px;
+}
+
+/*body{ background-color: rgb(18, 6, 128);
+    margin: 0;
+    padding: 0;
+
+}*/
+
+.profile-pic{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    width: 350px;
+    height: auto;
+    border-radius: 200px;
+}
+.name{
+
+   margin-right: 10px;
+   margin-left: 700px;
+   margin-top: 50px;
+   font-size: larger;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(4, 4, 71)
+}
+
+.right{
+
+    margin-left: 700px;
+    position: relative;
+    margin-top: 200px;
+   
+    
+}
+.left{
+    margin-left: 200px;
+    margin-top: -710px;
+    position: relative;
+}
+hr{
+    width: 40%;
+    margin:0;
+}
+

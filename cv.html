@@ -1,59 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Nuray Beydullayeva</title>
-  <link rel="stylesheet" href="cvstyle.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> 
-  <style>
-    button {
-      margin-left: 10px;
-      padding: 4px 8px;
-      border: none;
-      border-radius: 5px;
-      background-color: #4CAF50;
-      color: white;
-      cursor: pointer;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cv</title>
+  <link rel="stylesheet" href="cvstyle.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
 
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .section {
-      margin-bottom: 20px;
-    }
-
-    .collapsible {
-      background-color: #eee;
-      color: #444;
-      cursor: pointer;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      text-align: left;
-      outline: none;
-      font-size: 18px;
-      margin-top: 10px;
-    }
-
-    .collapsible:after {
-      content: '\002B';
-      float: right;
-    }
-
-    .collapsible.active:after {
-      content: "\2212";
-    }
-
-    .content {
-      padding: 0 18px;
-      display: none;
-      overflow: hidden;
-      background-color: #f9f9f9;
-    }
-  </style>
+  
 </head>
 <body>
   <div class="cv-container">
@@ -61,117 +15,162 @@
   </div>
 
   <div class="name">
-    <h1>NURAY BEYDULLAYEVA</h1>
-    <h2>STUDENT</h2>
+    <h1 id="cv-name">NURAY BEYDULLAYEVA</h1>
+    <h2 id="cv-position">STUDENT</h2>
   </div>
 
   <div class="cvbody">
     <div class="right">
       <h1>PROFILE</h1>
       <hr>
-      <p>SKSFRC NJF NBUIFREDQ ... (your text)</p>
+      <p id="profile-description">
+        SKSFRC NJF NBUIFREDQ CJDSDIEWNGVJNSL, SSMJROGVNSHJDR DJFNREJ3QWB DUOWCF EWBNREUFGNFDCB HDSBF HJDFHI4UEWDXN SDJTFRE UDHFNIU3RWFNCSJDNCF EKWJNFHDIUHNCJSR ERUDSFJOEWIJSNX CSDGI3U4WEJDS JHFRTR43UEWJSAKHFUITE5R EIDFJ8REWFNDWIUEH BIUREWJSDFND.
+      </p>
 
-      <div class="section">
-        <button class="collapsible">WORK EXPERIENCE</button>
-        <div class="content">
-          <button onclick="addExperience()">Add</button>
-          <div id="work-experience"></div>
-          <h4>BARCELLO STUDIO</h4>
-          <h6>MARKETING MANAGER</h6>
-          <ul>
-            <li>Develop and execute comprehensive marketing strategies.</li>
-            <li>Monitor brand consistency.</li>
-          </ul>
-          <h4>FAUGET STUDIO</h4>
-          <h6>MARKETING MANAGER</h6>
-          <ul>
-            <li>Create and manage the marketing budget.</li>
-            <li>Monitor brand consistency.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <h2>REFERENCE</h2>
+      <details open>
+        <summary><h1>WORK EXPERIENCE <button onclick="addExperience()">Add</button></h1></summary>
         <hr>
-        <b>Estelle Darcy</b>
-        <div>jmwdcijmgerwkdaosmvgtngrjfoiwas...</div>
-        <b>Harper Richard</b>
-        <div>snxusjqksijfe sdjnsaijmsooefjfd...</div>
-      </div>
+        <div id="work-experience"></div>
+        <h4>BARCELLO STUDIO</h4>
+        <h6>MARKETING MANAGER</h6>
+        <ul>
+          <li>Develop and execute comprehensive marketing strategies and campaigns that align with the company's goals and objectives.</li>
+          <li>Monitor brand consistency across marketing channels and materials</li>
+        </ul>
+        <h4>FAUGET STUDIO</h4>
+        <h6>MARKETING MANAGER</h6>
+        <ul>
+          <li>Create and manage the marketing budget, ensuring efficient allocation of resources and optimizing ROI.</li>
+          <li>Monitor brand consistency across marketing channels and materials</li>
+        </ul>
+      </details>
+
+      <h2>REFERENCE</h2>
+      <hr>
+      <b>Estelle Darcy</b><br>
+      jmwdcijmgerwkdaosmvgtngrjfoiwas vkerfmdlaks fjesdnxdkimjgfies jsnfisajn cjfdrnf<br>
+      <b>Harper Richard</b><br>
+      snxusjqksijfe sdjnsaijmsooefjfd kjndiasvnjds dsjncsdjk dsnzjndsc djnsjndsd
     </div>
 
     <div class="left">
       <h2>CONTACT</h2>
       <hr>
-      <div><i class="fa fa-phone"> +123-456-7890</i></div>
-      <div><i class="fa fa-envelope"> nuray070722@gmail.com</i></div>
+      <i class="fa fa-phone" id="phone"> +123-456-7890</i><br>
+      <i class="fa fa-envelope" id="email"> nuray070722@gmail.com</i>
 
-      <div class="section">
-        <button class="collapsible">EDUCATION</button>
-        <div class="content">
-          <button onclick="addEducation()">Add</button>
-          <div id="education"></div>
-          <h5>2029-2030 – WARDIERE UNIVERSITY</h5>
-          <ul><li>Master Business Management</li></ul>
-          <h5>2025-2029 – WARDIERE UNIVERSITY</h5>
-          <ul><li>Bachelor of Business</li><li>GPA 3.8/4.0</li></ul>
-        </div>
-      </div>
-
-      <div class="section">
-        <button class="collapsible">SKILLS</button>
-        <div class="content">
-          <button onclick="addSkill()">Add</button>
-          <ul id="skills">
-            <li>Project Management</li>
-            <li>Teamwork</li>
-            <li>Public Relations</li>
-            <li>Time Management</li>
-            <li>Leadership</li>
-            <li>Effective Communication</li>
-            <li>Critical Thinking</li>
-          </ul>
-        </div>
-      </div>
-
-      <div>
-        <h2>LANGUAGES</h2>
+      <details open>
+        <summary><h2>EDUCATION <button onclick="addEducation()">Add</button></h2></summary>
         <hr>
-        <ul>
-          <li>English (Fluent)</li>
-          <li>French (Fluent)</li>
-          <li>German (Basic)</li>
-          <li>Spanish (Intermediate)</li>
+        <div id="education"></div>
+        <h5>
+          <div>2029-2030</div>
+          <div>WARDIERE UNIVERSITY</div>
+          <ul><li>Master Business Management</li></ul>
+        </h5>
+        <h5>
+          <div>2025-2029</div>
+          <div>WARDIERE UNIVERSITY</div>
+          <ul>
+            <li>Bachelor of Business</li>
+            <li>GPA 3.8/4.0</li>
+          </ul>
+        </h5>
+      </details>
+
+      <details open>
+        <summary><h2>SKILLS <button onclick="addSkill()">Add</button></h2></summary>
+        <hr>
+        <ul id="skills">
+          <li>Project Management</li>
+          <li>Teamwork</li>
+          <li>Public Relations</li>
+          <li>Time Management</li>
+          <li>Leaderhsip</li>
+          <li>Effective Communication</li>
+          <li>Critical Thinking</li>
         </ul>
-      </div>
+      </details>
+
+      <h2>LANGUAGES</h2>
+      <hr>
+      <ul>
+        <li>English(Fluent)</li>
+        <li>French(Fluent)</li>
+        <li>German(Basics)</li>
+        <li>Spanish(Intermediate)</li>
+      </ul>
     </div>
   </div>
 
   <script>
-    // Collapsible
-    const coll = document.getElementsByClassName("collapsible");
-    for (let i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function () {
-        this.classList.toggle("active");
-        const content = this.nextElementSibling;
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
-        }
+    const cvInfo = {
+      name: "NURAY BEYDULLAYEVA",
+      position: "STUDENT",
+      profileDescription: "SKSFRC NJF NBUIFREDQ CJDSDIEWNGVJNSL, SSMJROGVNSHJDR DJFNREJ3QWB DUOWCF EWBNREUFGNFDCB HDSBF HJDFHI4UEWDXN SDJTFRE UDHFNIU3RWFNCSJDNCF EKWJNFHDIUHNCJSR ERUDSFJOEWIJSNX CSDGI3U4WEJDS JHFRTR43UEWJSAKHFUITE5R EIDFJ8REWFNDWIUEH BIUREWJSDFND.",
+      phone: "+123-456-7890",
+      email: "nuray070722@gmail.com",
+      workExperience: [
+        { company: "BARCELLO STUDIO", position: "MARKETING MANAGER", description: "Develop and execute comprehensive marketing strategies and campaigns that align with the company's goals and objectives." },
+        { company: "FAUGET STUDIO", position: "MARKETING MANAGER", description: "Create and manage the marketing budget, ensuring efficient allocation of resources and optimizing ROI." }
+      ],
+      education: [
+        { year: "2029-2030", school: "WARDIERE UNIVERSITY", degree: "Master Business Management" },
+        { year: "2025-2029", school: "WARDIERE UNIVERSITY", degree: "Bachelor of Business, GPA 3.8/4.0" }
+      ],
+      skills: [
+        "Project Management", "Teamwork", "Public Relations", "Time Management", "Leadership", "Effective Communication", "Critical Thinking"
+      ]
+    };
+
+    document.getElementById("cv-name").textContent = cvInfo.name;
+    document.getElementById("cv-position").textContent = cvInfo.position;
+    document.getElementById("profile-description").textContent = cvInfo.profileDescription;
+    document.getElementById("phone").textContent = cvInfo.phone;
+    document.getElementById("email").textContent = cvInfo.email;
+
+    function displayWorkExperience() {
+      const container = document.getElementById("work-experience");
+      container.innerHTML = "";
+      cvInfo.workExperience.forEach(work => {
+        const newItem = document.createElement("div");
+        newItem.innerHTML = `<h4>${work.company}</h4><h6>${work.position}</h6><p>${work.description}</p>`;
+        container.appendChild(newItem);
       });
     }
+
+    function displayEducation() {
+      const container = document.getElementById("education");
+      container.innerHTML = "";
+      cvInfo.education.forEach(edu => {
+        const newItem = document.createElement("div");
+        newItem.innerHTML = `<h5><div>${edu.year}</div><div>${edu.school}</div><ul><li>${edu.degree}</li></ul></h5>`;
+        container.appendChild(newItem);
+      });
+    }
+
+    function displaySkills() {
+      const list = document.getElementById("skills");
+      list.innerHTML = "";
+      cvInfo.skills.forEach(skill => {
+        const newItem = document.createElement("li");
+        newItem.textContent = skill;
+        list.appendChild(newItem);
+      });
+    }
+
+    displayWorkExperience();
+    displayEducation();
+    displaySkills();
 
     function addExperience() {
       const company = prompt("Enter company name:");
       const position = prompt("Enter position:");
       const description = prompt("Enter a short description:");
+
       if (company && position && description) {
-        const container = document.getElementById("work-experience");
-        const newItem = document.createElement("div");
-        newItem.innerHTML = `<h4>${company}</h4><h6>${position}</h6><p>${description}</p>`;
-        container.appendChild(newItem);
+        cvInfo.workExperience.push({ company, position, description });
+        displayWorkExperience();
       }
     }
 
@@ -179,21 +178,18 @@
       const year = prompt("Enter year (e.g., 2025-2029):");
       const school = prompt("Enter university name:");
       const degree = prompt("Enter degree or field:");
+
       if (year && school && degree) {
-        const container = document.getElementById("education");
-        const newItem = document.createElement("div");
-        newItem.innerHTML = `<h5>${year} – ${school}</h5><ul><li>${degree}</li></ul>`;
-        container.appendChild(newItem);
+        cvInfo.education.push({ year, school, degree });
+        displayEducation();
       }
     }
 
     function addSkill() {
       const skill = prompt("Enter new skill:");
       if (skill) {
-        const list = document.getElementById("skills");
-        const newItem = document.createElement("li");
-        newItem.textContent = skill;
-        list.appendChild(newItem);
+        cvInfo.skills.push(skill);
+        displaySkills();
       }
     }
   </script>

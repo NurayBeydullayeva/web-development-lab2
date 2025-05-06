@@ -1,52 +1,85 @@
-*{
-    margin: 20;
-    padding: 30;
-}
-
-.cv-container{
-   Position: relative;
-   padding: 20px;
-}
-
-/*body{ background-color: rgb(18, 6, 128);
+* {
     margin: 0;
     padding: 0;
-
-}*/
-
-.profile-pic{
-    position: absolute;
-    top: 20px;
-    left: 200px;
-    width: 350px;
-    height: auto;
-    border-radius: 200px;
-}
-.name{
-
-   margin-right: 10px;
-   margin-left: 700px;
-   margin-top: 50px;
-   font-size: larger;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color:rgb(4, 4, 71)
-}
-
-.right{
-
-    margin-left: 700px;
-    position: relative;
-    margin-top: 200px;
-   
-    
-}
-.left{
-    margin-left: 200px;
-    margin-top: -710px;
-    position: relative;
-}
-hr{
-    width: 40%;
-    margin:0;
-}
-
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #f0f2f5;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .left {
+    width: 35%;
+    background-color: #1e2a38;
+    color: white;
+    padding: 30px;
+  }
+  
+  .right {
+    width: 65%;
+    padding: 30px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 20px;
+    border: 3px solid white;
+  }
+  
+  .name {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+    font-weight: normal;
+  }
+  
+  section {
+    margin-bottom: 25px;
+  }
+  
+  section h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffc107;
+  }
+  
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 15px;
+  }
+  
+  .left hr {
+    background-color: #ffc107;
+  }
+  
+  .left ul, .right ul {
+    list-style: disc;
+    padding-left: 20px;
+  }
+  
+  .left ul li, .right ul li {
+    margin-bottom: 8px;
+  }
+  

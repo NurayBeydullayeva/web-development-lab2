@@ -1,156 +1,81 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+
+.cv-container {
+    width: 80%; /* CV-nin eni 80% olacaq */
+    max-width: 1000px; /* Max eni 1000px */
+    margin: 50px auto; /* Yuxari 50px bosluq ve merkeze yerlesdirmek */
+    padding: 20px;
+    background-color: #fff; /* Arxa plan rengi */
+    
+   
+  }
+
+
+.profile-pic{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    width: 350px;
+    height: auto;
+    border-radius: 200px;
+}
+.name{
+
+   margin-right: 10px;
+   margin-left: 700px;
+   margin-top: 50px;
+   font-size: larger;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:rgb(4, 4, 71)
 }
 
-body {
-  background-color: #f0f2f5;
-  color: #333;
-  line-height: 1.6;
+.cvbody {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+  }
+  
+  
+  .left {
+    background-color: #2a5d84; 
+    color: white;
+    padding: 20px;
+    width: 45%;
+    box-sizing: border-box;
+    margin-top: 120px;
+    margin-right: 5%;
+  }
+  
+  
+  .right {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    width: 45%;
+    box-sizing: border-box;
+    margin-top: 120px;
+    margin-left: 5%;
+  }
+
+
+  button {
+    margin-left: 10px;
+    padding: 4px 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+  summary {
+    cursor: pointer;
+  }
+
+
+  
+hr{
+    width: 40%;
+    margin:0;
 }
 
-.container {
-  display: flex;
-  max-width: 1200px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.left {
-  width: 35%;
-  background-color: #1e2a38;
-  color: white;
-  padding: 30px;
-}
-
-.right {
-  width: 65%;
-  padding: 30px;
-}
-
-.profile-pic {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: block;
-  margin: 0 auto 20px;
-  border: 3px solid white;
-}
-
-.name {
-  text-align: center;
-  font-size: 26px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.title {
-  text-align: center;
-  font-size: 18px;
-  margin-bottom: 30px;
-  font-weight: normal;
-  color: #ccc;
-}
-
-section {
-  margin-bottom: 25px;
-}
-
-section h3 {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: #ffc107;
-}
-
-hr {
-  border: 0;
-  height: 1px;
-  background-color: #ddd;
-  margin: 15px 0;
-}
-
-.left hr {
-  background-color: #ffc107;
-}
-
-.left ul,
-.right ul {
-  list-style: disc;
-  padding-left: 20px;
-}
-
-.left ul li,
-.right ul li {
-  margin-bottom: 8px;
-}
-
-button {
-  margin-top: 10px;
-  padding: 6px 12px;
-  border: none;
-  border-radius: 5px;
-  background-color: #ffc107;
-  color: #1e2a38;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #e0a800;
-}
-
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 10px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 18px;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
-}
-
-.collapsible:hover {
-  background-color: #ddd;
-}
-
-.collapsible:after {
-  content: '\002B'; /* + icon */
-  float: right;
-}
-
-.collapsible.active:after {
-  content: "\2212"; /* − icon */
-}
-
-.content {
-  padding: 10px 15px;
-  display: none;
-  overflow: hidden;
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
-h4, h5, h6 {
-  margin: 8px 0;
-}
-
-h5 {
-  font-size: 16px;
-}
-
-h6 {
-  font-size: 14px;
-  color: #666;
-}

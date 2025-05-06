@@ -1,12 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CV - Nuray Beydullayeva</title>
-  <link rel="stylesheet" href="cvstyle.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="cvstyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"> 
   <style>
+    button {
+      margin-left: 10px;
+      padding: 4px 8px;
+      border: none;
+      border-radius: 5px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
     .collapsible {
       background-color: #eee;
       color: #444;
@@ -16,12 +34,17 @@
       border: none;
       text-align: left;
       outline: none;
-      font-size: 16px;
+      font-size: 18px;
       margin-top: 10px;
     }
 
-    .active, .collapsible:hover {
-      background-color: #ccc;
+    .collapsible:after {
+      content: '\002B';
+      float: right;
+    }
+
+    .collapsible.active:after {
+      content: "\2212";
     }
 
     .content {
@@ -30,99 +53,103 @@
       overflow: hidden;
       background-color: #f9f9f9;
     }
-
-    button.add-btn {
-      float: right;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      padding: 4px 8px;
-      border-radius: 5px;
-      margin-left: 10px;
-    }
-
-    button.add-btn:hover {
-      background-color: #45a049;
-    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="cv-container">
+    <img src="avatar.png" alt="profil sekli" class="profile-pic">
+  </div>
+
+  <div class="name">
+    <h1>NURAY BEYDULLAYEVA</h1>
+    <h2>STUDENT</h2>
+  </div>
+
+  <div class="cvbody">
+    <div class="right">
+      <h1>PROFILE</h1>
+      <hr>
+      <p>SKSFRC NJF NBUIFREDQ ... (your text)</p>
+
+      <div class="section">
+        <button class="collapsible">WORK EXPERIENCE</button>
+        <div class="content">
+          <button onclick="addExperience()">Add</button>
+          <div id="work-experience"></div>
+          <h4>BARCELLO STUDIO</h4>
+          <h6>MARKETING MANAGER</h6>
+          <ul>
+            <li>Develop and execute comprehensive marketing strategies.</li>
+            <li>Monitor brand consistency.</li>
+          </ul>
+          <h4>FAUGET STUDIO</h4>
+          <h6>MARKETING MANAGER</h6>
+          <ul>
+            <li>Create and manage the marketing budget.</li>
+            <li>Monitor brand consistency.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h2>REFERENCE</h2>
+        <hr>
+        <b>Estelle Darcy</b>
+        <div>jmwdcijmgerwkdaosmvgtngrjfoiwas...</div>
+        <b>Harper Richard</b>
+        <div>snxusjqksijfe sdjnsaijmsooefjfd...</div>
+      </div>
+    </div>
+
     <div class="left">
-      <img src="avatar.png" alt="Profile Picture" class="profile-pic" />
-      <h1 class="name">Nuray Beydullayeva</h1>
-      <h2 class="title">Student</h2>
+      <h2>CONTACT</h2>
+      <hr>
+      <div><i class="fa fa-phone"> +123-456-7890</i></div>
+      <div><i class="fa fa-envelope"> nuray070722@gmail.com</i></div>
 
-      <section>
-        <h3>Contact</h3>
-        <hr />
-        <p><i class="fas fa-phone"></i> +123-456-7890</p>
-        <p><i class="fas fa-envelope"></i> nuray070722@gmail.com</p>
-      </section>
-
-      <button class="collapsible">Education <button class="add-btn" onclick="addEducation()">Add</button></button>
-      <div class="content" id="education-section">
-        <p><strong>2029-2030</strong><br/>Wardiére University<br/>Master Business Management</p>
-        <p><strong>2025-2029</strong><br/>Wardiére University<br/>Bachelor of Business<br/>GPA 3.8/4.0</p>
+      <div class="section">
+        <button class="collapsible">EDUCATION</button>
+        <div class="content">
+          <button onclick="addEducation()">Add</button>
+          <div id="education"></div>
+          <h5>2029-2030 – WARDIERE UNIVERSITY</h5>
+          <ul><li>Master Business Management</li></ul>
+          <h5>2025-2029 – WARDIERE UNIVERSITY</h5>
+          <ul><li>Bachelor of Business</li><li>GPA 3.8/4.0</li></ul>
+        </div>
       </div>
 
-      <button class="collapsible">Skills <button class="add-btn" onclick="addSkill()">Add</button></button>
-      <div class="content">
-        <ul id="skills-list">
-          <li>Project Management</li>
-          <li>Teamwork</li>
-          <li>Public Relations</li>
-          <li>Time Management</li>
-          <li>Leadership</li>
-          <li>Effective Communication</li>
-          <li>Critical Thinking</li>
-        </ul>
+      <div class="section">
+        <button class="collapsible">SKILLS</button>
+        <div class="content">
+          <button onclick="addSkill()">Add</button>
+          <ul id="skills">
+            <li>Project Management</li>
+            <li>Teamwork</li>
+            <li>Public Relations</li>
+            <li>Time Management</li>
+            <li>Leadership</li>
+            <li>Effective Communication</li>
+            <li>Critical Thinking</li>
+          </ul>
+        </div>
       </div>
 
-      <section>
-        <h3>Languages</h3>
-        <hr />
+      <div>
+        <h2>LANGUAGES</h2>
+        <hr>
         <ul>
           <li>English (Fluent)</li>
           <li>French (Fluent)</li>
           <li>German (Basic)</li>
           <li>Spanish (Intermediate)</li>
         </ul>
-      </section>
-    </div>
-
-    <div class="right">
-      <section>
-        <h3>Profile</h3>
-        <hr />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
-      </section>
-
-      <button class="collapsible">Work Experience <button class="add-btn" onclick="addExperience()">Add</button></button>
-      <div class="content" id="experience-section">
-        <p><strong>Barcello Studio</strong><br/>Marketing Manager</p>
-        <ul>
-          <li>Develop and execute marketing strategies aligned with company goals.</li>
-          <li>Monitor brand consistency across marketing channels and materials.</li>
-        </ul>
-        <p><strong>Fauget Studio</strong><br/>Marketing Manager</p>
-        <ul>
-          <li>Create and manage the marketing budget efficiently.</li>
-          <li>Ensure consistent branding across campaigns.</li>
-        </ul>
       </div>
-
-      <section>
-        <h3>Reference</h3>
-        <hr />
-        <p><strong>Estelle Darcy</strong><br/>jmwdcijmgerwkdaosmvgtngrjfoiwas vkerfmdlaks fjesdnxdkimjgfies</p>
-        <p><strong>Harper Richard</strong><br/>snxusjqksijfe sdjnsaijmsooefjfd kjndiasvnjds dsjncsdjk dsnzjndsc</p>
-      </section>
     </div>
   </div>
 
   <script>
-    // Collapsible toggle
+    // Collapsible
     const coll = document.getElementsByClassName("collapsible");
     for (let i = 0; i < coll.length; i++) {
       coll[i].addEventListener("click", function () {
@@ -136,44 +163,37 @@
       });
     }
 
+    function addExperience() {
+      const company = prompt("Enter company name:");
+      const position = prompt("Enter position:");
+      const description = prompt("Enter a short description:");
+      if (company && position && description) {
+        const container = document.getElementById("work-experience");
+        const newItem = document.createElement("div");
+        newItem.innerHTML = `<h4>${company}</h4><h6>${position}</h6><p>${description}</p>`;
+        container.appendChild(newItem);
+      }
+    }
+
     function addEducation() {
-      const year = prompt("Enter years (e.g., 2023-2027):");
-      const school = prompt("Enter school/university name:");
-      const degree = prompt("Enter degree/field:");
+      const year = prompt("Enter year (e.g., 2025-2029):");
+      const school = prompt("Enter university name:");
+      const degree = prompt("Enter degree or field:");
       if (year && school && degree) {
-        const container = document.getElementById("education-section");
-        const item = document.createElement("p");
-        item.innerHTML = `<strong>${year}</strong><br/>${school}<br/>${degree}`;
-        container.appendChild(item);
+        const container = document.getElementById("education");
+        const newItem = document.createElement("div");
+        newItem.innerHTML = `<h5>${year} – ${school}</h5><ul><li>${degree}</li></ul>`;
+        container.appendChild(newItem);
       }
     }
 
     function addSkill() {
-      const skill = prompt("Enter a new skill:");
+      const skill = prompt("Enter new skill:");
       if (skill) {
-        const list = document.getElementById("skills-list");
-        const item = document.createElement("li");
-        item.textContent = skill;
-        list.appendChild(item);
-      }
-    }
-
-    function addExperience() {
-      const company = prompt("Enter company name:");
-      const position = prompt("Enter position:");
-      const task1 = prompt("Enter task/responsibility 1:");
-      const task2 = prompt("Enter task/responsibility 2:");
-      if (company && position) {
-        const container = document.getElementById("experience-section");
-        const item = document.createElement("div");
-        item.innerHTML = `
-          <p><strong>${company}</strong><br/>${position}</p>
-          <ul>
-            ${task1 ? `<li>${task1}</li>` : ""}
-            ${task2 ? `<li>${task2}</li>` : ""}
-          </ul>
-        `;
-        container.appendChild(item);
+        const list = document.getElementById("skills");
+        const newItem = document.createElement("li");
+        newItem.textContent = skill;
+        list.appendChild(newItem);
       }
     }
   </script>

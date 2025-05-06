@@ -1,235 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cv</title>
-    <link rel="stylesheet" href="cvstyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV - Nuray Beydullayeva</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .collapsible {
+      background-color: #eee;
+      color: #444;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 16px;
+      margin-top: 10px;
+    }
 
-    <style>
-        button {
-          margin-left: 10px;
-          padding: 4px 8px;
-          border: none;
-          border-radius: 5px;
-          background-color: #4CAF50;
-          color: white;
-          cursor: pointer;
-        }
-    
-        button:hover {
-          background-color: #45a049;
-        }
-    
-        .section {
-          margin-bottom: 20px;
-        }
-      </style>
+    .active, .collapsible:hover {
+      background-color: #ccc;
+    }
 
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #f9f9f9;
+    }
+
+    button.add-btn {
+      float: right;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 4px 8px;
+      border-radius: 5px;
+      margin-left: 10px;
+    }
+
+    button.add-btn:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
-<body>  <!--head-->
-    <div class="cv-container">
-        <img src="avatar.png" alt="profil sekli" class="profile-pic"> </div>
-    <div class="name">
-    <div>
-        <h1> 
-                 NURAY BEYDULLAYEVA </h1>
-        </div>
-        <div>
-        <h2>
-            STUDENT</h2>
-    </div> </div>
+<body>
+  <div class="container">
+    <div class="left">
+      <img src="avatar.png" alt="Profile Picture" class="profile-pic" />
+      <h1 class="name">Nuray Beydullayeva</h1>
+      <h2 class="title">Student</h2>
 
-    <!--body-->
-    <div class="cvbody">
+      <section>
+        <h3>Contact</h3>
+        <hr />
+        <p><i class="fas fa-phone"></i> +123-456-7890</p>
+        <p><i class="fas fa-envelope"></i> nuray070722@gmail.com</p>
+      </section>
+
+      <button class="collapsible">Education <button class="add-btn" onclick="addEducation()">Add</button></button>
+      <div class="content" id="education-section">
+        <p><strong>2029-2030</strong><br/>Wardiére University<br/>Master Business Management</p>
+        <p><strong>2025-2029</strong><br/>Wardiére University<br/>Bachelor of Business<br/>GPA 3.8/4.0</p>
+      </div>
+
+      <button class="collapsible">Skills <button class="add-btn" onclick="addSkill()">Add</button></button>
+      <div class="content">
+        <ul id="skills-list">
+          <li>Project Management</li>
+          <li>Teamwork</li>
+          <li>Public Relations</li>
+          <li>Time Management</li>
+          <li>Leadership</li>
+          <li>Effective Communication</li>
+          <li>Critical Thinking</li>
+        </ul>
+      </div>
+
+      <section>
+        <h3>Languages</h3>
+        <hr />
+        <ul>
+          <li>English (Fluent)</li>
+          <li>French (Fluent)</li>
+          <li>German (Basic)</li>
+          <li>Spanish (Intermediate)</li>
+        </ul>
+      </section>
+    </div>
+
     <div class="right">
-    <h1>
-        PROFILE</h1>
-        <hr>
-        <p>
-            SKSFRC NJF NBUIFREDQ CJDSDIEWNGVJNSL, SSMJROGVNSHJDR DJFNREJ3QWB DUOWCF EWBNREUFGNFDCB HDSBF HJDFHI4UEWDXN SDJTFRE UDHFNIU3RWFNCSJDNCF EKWJNFHDIUHNCJSR ERUDSFJOEWIJSNX CSDGI3U4WEJDS JHFRTR43UEWJSAKHFUITE5R EIDFJ8REWFNDWIUEH BIUREWJSDFND.
-        </p>
-         <div class="section">
-        <h1>
-          WORK EXPERIENCE
-          <button onclick="addExperience()">Add</button>
-        </h1>
-            <hr>
-            <div id="work-experience">
-                <!-- current work experience -->
-              </div>
-            </div>
-            <p>
-                <div>
-                    <h4>
-                    BARCELLO STUDIO</h4>
-                </div>
-                <div>
-                    <h6>
-                        MARKETING MANAGER
-                    </h6>
-                </div>
-            </p>
-            
-            <ul>
-                <div> <li>Develop and execute comprehensive marketing strategies and campaigns that align with the company's goals and objectives.</li> </div>
-                <li>Monitor brand consistency across marketing channels and materials</li>
-            </ul> 
-            <p>
-                <div>
-                    <h4>
-                    FAUGET STUDIO</h4>
-                </div>
-                <div>
-                    <h6>
-                        MARKETING MANAGER
-                    </h6>
-                </div>
-            </p>
-           
-            <ul>
-                <div><li>Create and manage the marketing budget, ensuring efficient allocation of resources and optimizing ROI.</li> </div>
-                <li>Monitor brand consistency across marketing channels and materials</li>
-            </ul>
-          
-          <div>
-            <h2>
-                REFERENCE
-            </h2>
-          </div>
-          <hr>
-          <div>
-          <b>
-            Estelle Darcy
-          </b> </div>
-           <div>
-            jmwdcijmgerwkdaosmvgtngrjfoiwas vkerfmdlaks fjesdnxdkimjgfies jsnfisajn cjfdrnf</div>
-            <div>
-                <b>Harper Richard</b> </div>
-               <div>
-            snxusjqksijfe sdjnsaijmsooefjfd kjndiasvnjds dsjncsdjk dsnzjndsc djnsjndsd
-            </div> </div>
-        <div class="left">
-            <div>
-                <h2>
-                CONTACT</h2>
-            </div>
-            <hr>
-           <div> <i class="fa fa-phone"> +123-456-7890</i> </div>
-           <div> <i class="fa fa-envelope">nuray070722@gmail.com</i> </div>
-           <!-- <div> <i class="fa fa-location-dot"> anywhere</i> </div> -->
-           <div class="section">
-            <h2>
-              EDUCATION
-              <button onclick="addEducation()">Add</button>
-            </h2>
-            <div id="education">
-              <!-- current education -->
-            </div>
-          </div>
-                <hr>
-                <h5>
-                   <div> 2029-2030</div>
-                   <div>WARDIERE UNIVERSITY</div>
-                    <ul>
-                        <li>Master Business Management</li>
-                    </ul>
-                </h5>
-                <h5>
-                    <div> 2025-2029</div>
-                    <div>WARDIERE UNIVERSITY</div>
-                     <ul>
-                         <li>Bachelor of Business</li>
-                         <li>GPA 3.8/4.0</li>
-                     </ul>
-                 </h5> 
+      <section>
+        <h3>Profile</h3>
+        <hr />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+      </section>
 
-                 <div class="section">
-                    <h2>
-                      SKILLS
-                      <button onclick="addSkill()">Add</button>
-                    </h2>
-                 <hr>
-                 <ul>
-                    <li>Project Management</li>
-                    <li>Teamwork</li>
-                    <li>Public Relations</li>
-                    <li>Time Management</li>
-                    <li>Leaderhsip</li>
-                    <li>Effective Communication</li>
-                    <li>Critical Thinking</li>
-                 </ul>
-                 <div>
-                    <h2>LANGUAGES</h2>
-                 </div>
-                 <hr>
-                 <ul>
-                    <li>English(Fluent)</li>
-                    <li>French(Fluent)</li>
-                    <li>German(Basics)</li>
-                    <li>Spanish(Intermediate)</li>
-                 </ul>
+      <button class="collapsible">Work Experience <button class="add-btn" onclick="addExperience()">Add</button></button>
+      <div class="content" id="experience-section">
+        <p><strong>Barcello Studio</strong><br/>Marketing Manager</p>
+        <ul>
+          <li>Develop and execute marketing strategies aligned with company goals.</li>
+          <li>Monitor brand consistency across marketing channels and materials.</li>
+        </ul>
+        <p><strong>Fauget Studio</strong><br/>Marketing Manager</p>
+        <ul>
+          <li>Create and manage the marketing budget efficiently.</li>
+          <li>Ensure consistent branding across campaigns.</li>
+        </ul>
+      </div>
 
+      <section>
+        <h3>Reference</h3>
+        <hr />
+        <p><strong>Estelle Darcy</strong><br/>jmwdcijmgerwkdaosmvgtngrjfoiwas vkerfmdlaks fjesdnxdkimjgfies</p>
+        <p><strong>Harper Richard</strong><br/>snxusjqksijfe sdjnsaijmsooefjfd kjndiasvnjds dsjncsdjk dsnzjndsc</p>
+      </section>
+    </div>
+  </div>
 
-
-
-
-
-        </div></div>
-
-
-         <!-- JavaScript -->
   <script>
-    function addExperience() {
-      const company = prompt("Enter company name:");
-      const position = prompt("Enter position:");
-      const description = prompt("Enter a short description:");
-
-      if (company && position && description) {
-        const container = document.getElementById("work-experience");
-        const newItem = document.createElement("div");
-        newItem.innerHTML = `
-          <h4>${company}</h4>
-          <h6>${position}</h6>
-          <p>${description}</p>
-        `;
-        container.appendChild(newItem);
-      }
+    // Collapsible toggle
+    const coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        const content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
     }
 
     function addEducation() {
-      const year = prompt("Enter year (e.g., 2025-2029):");
-      const school = prompt("Enter university name:");
-      const degree = prompt("Enter degree or field:");
-
+      const year = prompt("Enter years (e.g., 2023-2027):");
+      const school = prompt("Enter school/university name:");
+      const degree = prompt("Enter degree/field:");
       if (year && school && degree) {
-        const container = document.getElementById("education");
-        const newItem = document.createElement("div");
-        newItem.innerHTML = `
-          <h5>
-            <div>${year}</div>
-            <div>${school}</div>
-            <ul><li>${degree}</li></ul>
-          </h5>
-        `;
-        container.appendChild(newItem);
+        const container = document.getElementById("education-section");
+        const item = document.createElement("p");
+        item.innerHTML = `<strong>${year}</strong><br/>${school}<br/>${degree}`;
+        container.appendChild(item);
       }
     }
 
     function addSkill() {
-      const skill = prompt("Enter new skill:");
+      const skill = prompt("Enter a new skill:");
       if (skill) {
-        const list = document.getElementById("skills");
-        const newItem = document.createElement("li");
-        newItem.textContent = skill;
-        list.appendChild(newItem);
+        const list = document.getElementById("skills-list");
+        const item = document.createElement("li");
+        item.textContent = skill;
+        list.appendChild(item);
+      }
+    }
+
+    function addExperience() {
+      const company = prompt("Enter company name:");
+      const position = prompt("Enter position:");
+      const task1 = prompt("Enter task/responsibility 1:");
+      const task2 = prompt("Enter task/responsibility 2:");
+      if (company && position) {
+        const container = document.getElementById("experience-section");
+        const item = document.createElement("div");
+        item.innerHTML = `
+          <p><strong>${company}</strong><br/>${position}</p>
+          <ul>
+            ${task1 ? `<li>${task1}</li>` : ""}
+            ${task2 ? `<li>${task2}</li>` : ""}
+          </ul>
+        `;
+        container.appendChild(item);
       }
     }
   </script>
-
-
-
-
 </body>
 </html>
